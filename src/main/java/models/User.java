@@ -1,5 +1,8 @@
 package models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
     private Long id;
     private String firstname;
@@ -7,6 +10,7 @@ public class User {
     private String email;
     private String password;
     private ERole role;
+    private List<Reservation> reservations;
 
     public User(Long id, String firstname, String lastname, String email, String password, ERole role) {
         this.id = id;
@@ -15,6 +19,7 @@ public class User {
         this.email = email;
         this.password = password;
         this.role = role;
+        this.reservations = new ArrayList<>();
     }
 
     public User() {
@@ -66,5 +71,13 @@ public class User {
 
     public void setRole(ERole role) {
         this.role = role;
+    }
+
+    public List<Reservation> getReservations() {
+        return reservations;
+    }
+
+    public void addReservation(Reservation reservation) {
+        reservations.add(reservation);
     }
 }

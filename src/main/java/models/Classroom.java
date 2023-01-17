@@ -1,14 +1,19 @@
 package models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Classroom {
     private Long id;
     private String name;
     private Boolean isAvailable;
+    private List<Reservation> reservations;
 
     public Classroom(Long id, String name, Boolean isAvailable) {
         this.id = id;
         this.name = name;
         this.isAvailable = isAvailable;
+        this.reservations = new ArrayList<>();
     }
 
     public Classroom() {
@@ -36,5 +41,9 @@ public class Classroom {
 
     public void setAvailable(Boolean available) {
         isAvailable = available;
+    }
+
+    public void addReservation(Reservation reservation) {
+        reservations.add(reservation);
     }
 }
