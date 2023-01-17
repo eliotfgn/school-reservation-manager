@@ -1,13 +1,14 @@
 package services;
 
 import dto.ClassroomReservationRequest;
+import dto.ReservationRequest;
 import models.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class ClassroomReservationService implements ReservationService{
+public class ClassroomReservationService {
     private static final List<ClassroomReservation> reservations = new ArrayList<>();
 
     private static ClassroomReservationService instance;

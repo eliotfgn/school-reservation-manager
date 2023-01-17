@@ -4,7 +4,7 @@ import models.User;
 
 import java.time.LocalDateTime;
 
-public class ReservationRequest {
+public abstract class ReservationRequest {
     private final User user;
     private final LocalDateTime date;
 
