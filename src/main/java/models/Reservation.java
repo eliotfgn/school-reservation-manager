@@ -4,12 +4,14 @@ import java.time.LocalDateTime;
 
 public abstract class Reservation {
     private Long id;
-    private LocalDateTime date;
+    private LocalDateTime startAt;
+    private LocalDateTime endAt;
     private ReservationStatus status;
 
-    public Reservation(Long id, LocalDateTime date, ReservationStatus status) {
+    public Reservation(Long id, LocalDateTime startAt, LocalDateTime endAt, ReservationStatus status) {
         this.id = id;
-        this.date = date;
+        this.startAt = startAt;
+        this.endAt = endAt;
         this.status = status;
     }
 
@@ -24,19 +26,27 @@ public abstract class Reservation {
         this.id = id;
     }
 
-    public LocalDateTime getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDateTime date) {
-        this.date = date;
-    }
-
     public ReservationStatus getStatus() {
         return status;
     }
 
     public void setStatus(ReservationStatus status) {
         this.status = status;
+    }
+
+    public LocalDateTime getStartAt() {
+        return startAt;
+    }
+
+    public void setStartAt(LocalDateTime startAt) {
+        this.startAt = startAt;
+    }
+
+    public LocalDateTime getEndAt() {
+        return endAt;
+    }
+
+    public void setEndAt(LocalDateTime endAt) {
+        this.endAt = endAt;
     }
 }
